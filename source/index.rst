@@ -13,3 +13,4 @@ Welcome to python for C++ developers's documentation!
    python2_vs_python3
    virtualenv
    pip
+   syntax
