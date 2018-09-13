@@ -11,15 +11,15 @@ Syntax in python can be a bit strange for Java or C++ developers because:\n
   
   print("example")
 
-* Indents are necessary
+* Indents are necessary and can change a program behaviour but there is not a forced length of indent it can be a 1 space or 5 but it must be the same in whole file
 
 .. code-block:: python
 
   list = [1,4,3,2,1,6]
+  
   for x in list:
-    if x % 2 == 0:
+    if x > 3:
       print(x)
-  # 4,2,6
 
 * Compiler will raise an error if you made any mistake in indentation:
 
@@ -42,7 +42,7 @@ Syntax in python can be a bit strange for Java or C++ developers because:\n
   print(x)
   #>>>abc
 
-* Every variable is the reference to a object in memory but for small integers nad short strings it behaves different that in other cases
+* Every variable is the reference to a object in memory but for small integers and short strings it behaves different that in other cases: Unfotunately there is no specified a behviour of references to small strings, it can beheaves differently on different interpreters
 
 .. code-block:: python
 

@@ -14,3 +14,4 @@ Welcome to python for C++ developers's documentation!
    virtualenv
    pip
    syntax
+   containers
