@@ -66,6 +66,62 @@ List
     l[1:3]
     >>>["Xenial Xerus", "Trusty Tahr"]
 
+  * Add element:
+  
+  ::
+  
+    l = []
+    l.apend("Bionic Beaver")
+    l.append(2)
+    l2 = [1,2,3]
+    l.append(l2)
+    print(l)
+    >>>["Bionic Beaver", 2, [1,2,3]]
+
+  * Remove element:
+  
+  ::
+
+    l = ["Bionic Beaver", "Xenial Xerus", "Trusty Tahr", "Precise Pangoli"]
+    l.remove("Xenial Xerus")
+    print(l)
+    >>>["Bionic Beaver", "Trusty Tahr", "Precise Pangoli"]
+
+  OR
+  
+  Remove and  return element with specified index
+ 
+  ::
+
+    l = ["Bionic Beaver", "Xenial Xerus", "Trusty Tahr", "Precise Pangoli"]
+    l.pop()
+    print(l)
+    >>> l = ["Bionic Beaver", "Xenial Xerus", "Trusty Tahr"]
+    l = ["Bionic Beaver", "Xenial Xerus", "Trusty Tahr", "Precise Pangoli"]
+    removed = l.pop(2)
+    print(l)
+    >>> l = ["Bionic Beaver", "Xenial Xerus", "Trusty Tahr"]
+    print(remove)
+    >>> Trusty Tahr
+  
+  OR
+
+  ::
+
+    l = ["Bionic Beaver", "Xenial Xerus", "Trusty Tahr", "Precise Pangoli"]
+    del l[0]
+    print(l)
+    >>>["Xenial Xerus", "Trusty Tahr", "Precise Pangoli"]
+    
+  del can also delete whole list
+
+
+  ::
+    l = ["Bionic Beaver", "Xenial Xerus", "Trusty Tahr", "Precise Pangoli"]
+    del l
+    print(l) // ERROR
+    l no longer exist
+
   * Combining two tables:
 
   ::
@@ -116,6 +172,14 @@ Replaced is the importat word because elements can't be replaced but can be chan
     print(tup)
     >>(1, "element", ["Gutsy Gibbon", 2.2])
 
+Tuples cannot be changes so del keyword can only delete whole tuple
+
+  ::
+   
+    t = ("Bionic Beaver", "Xenial Xerus")
+    del t
+    print(t) // ERROR Tuple no longer exists
+   
 ============
 Dictionaries
 ============
@@ -179,6 +243,29 @@ Dictionaries are like maps in C++/Java to create empty dictionary type:
     #5.04 Hoary Hedgehog
     #5.10 Breezy Badger
 
+* Remove item with specified key from dictionary
+
+  ::
+
+    dict = {4.10:"Warty Warthog", 5.04:"Hoary Hedgehog", 5.10:"Breezy Badger"}
+    del dict[4.10]
+    print(dict)
+    >>>{5.04:"Hoary Hedgehog", 5.10:"Breezy Badger"}
+    # Same as for other containers del can also remove whole dictionary
+
+  OR
+
+  ::
+   
+    dict = {4.10:"Warty Warthog", 5.04:"Hoary Hedgehog", 5.10:"Breezy Badger"}
+    removed = dict.pop(5.04)
+    print(dict)
+    >>>{4.10:"Bionic Beaver", 5.10:"Breezy Badger"}
+    print(removed)
+    >>>Hoary Hedgehog
+
+The difference between del dict[key] and dict.pop() is that pop returns a removed element item value
+
 ====
 Sets
 ====
@@ -192,13 +279,13 @@ Sets
     set = set()
     set = {1, 2, 3}
     
-    l1 = {1:2}
-    l2 = {1,2}
+    l1 = {1:2} # dictionary
+    l2 = {1,2} # set
 
     type(l1) == type(l2)
     >>>False
 
-  Adding element to set:
+* Add element to set:
   
   ::
   
@@ -211,4 +298,26 @@ Sets
     print(set)
     >>>{"Warty Warthog", "Hoary Hedgehog", "Breezy Badger", "Xenial Xerus"}
     # Even if other will be changed it will no affect set
+   
+* Remove element from set:
+
+  ::
+
+    set = {"Warty Warthog", "Hoary Hedgehog"}
+    set.remove("Warty Warthog")
+    print(set)
+    >>>{"Hoary Hedgehog"}
+
+    set = {"Warty Warthog", "Hoary Hedgehog"}
+    set.remove("Breezy Badger") // ERROR removing element that doesn't exists in set will raise an Exception
     
+  To avoid raising exception You can use discard method:
+
+  ::    
+
+    set = {"Warty Warthog", "Hoary Hedgehog"}
+    set.discaer("Breezy Badger")
+    print(set)
+    >>>{"Warty Warthog", "Hoary Hedgehog"}
+
+
