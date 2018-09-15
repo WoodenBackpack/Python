@@ -10,6 +10,7 @@ List
   ::
   
     l = [1,2,3]
+    l = list()
   
   There is no limitation in type of elements, same python list can contain string, integers, classes etc.
   
@@ -93,6 +94,8 @@ Tuples
   ::
 
     tup = (1,2,3)
+    tup = tuple()
+    tup = tuple([2,3,4,5])
     # tup[1] = 20 // ERROR, tuple elements cant be replaced
 
 
@@ -122,6 +125,9 @@ Dictionaries are like maps in C++/Java to create empty dictionary type:
   ::
   
     d = {}
+    s = dict()
+    s = dict([(4.10, "Warty Warthog"), (5.04, "Hoary Hedgehog")])
+    // create dictionary from list of two element tuples
 
 * Accessing elements of dictionary:
 
@@ -140,5 +146,69 @@ Dictionaries are like maps in C++/Java to create empty dictionary type:
     # But if you want to access element with key that is not in dictionary it will raise a error
     print(dict[8.04])
     // ERROR
+    
+* There are two ways to get element from dictionary, but one protect developer from accessing elements that are not in dictionary
 
+  ::
+  
+    dict = {4.10:"Warty Warthog", 5.04:"Hoary Hedgehog", 5.10:"Breezy Badger"}
+    #print(dict[6.06])  // ERROR it will raise an KeyError exception
+    print(dict.get(6.06))
+    >>>None
 
+* Iterate over keys/values/items these lists are always in the insertion order
+
+  ::
+
+    dict = {4.10:"Warty Warthog", 5.04:"Hoary Hedgehog", 5.10:"Breezy Badger"}
+    for key in dict.keys():
+      print(key) 
+    #4.10
+    #5.04
+    #5.10
+
+    for value in dict.values():
+      print(value)
+    # Warty Warthog
+    # Hoary Hedgehog
+    # Breezy Badger
+
+    for (key, value) in dict.items():
+      print(str(key) + " " + str(value))
+    #4.10 Warty Warthog
+    #5.04 Hoary Hedgehog
+    #5.10 Breezy Badger
+
+====
+Sets
+====
+
+* Create set
+
+  Set like a dictionary is unordered.
+
+  ::
+ 
+    set = set()
+    set = {1, 2, 3}
+    
+    l1 = {1:2}
+    l2 = {1,2}
+
+    type(l1) == type(l2)
+    >>>False
+
+  Adding element to set:
+  
+  ::
+  
+    set = {"Warty Warthog", "Hoary Hedgehog"}
+    set.add("Breezy Badger")
+    print(set)
+    >>>{"Warty Warthog", "Hoary Hedgehog", "Breezy Badger"}
+    other = {"Hoary Hedgehog", "Xenial Xerus"}
+    set.update(other)
+    print(set)
+    >>>{"Warty Warthog", "Hoary Hedgehog", "Breezy Badger", "Xenial Xerus"}
+    # Even if other will be changed it will no affect set
+    
