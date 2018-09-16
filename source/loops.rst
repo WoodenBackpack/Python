@@ -1,11 +1,12 @@
 Loops
-
+*****
 
 =====
 While
 =====
 
   ::
+
     x = 0
     while x != 5:
       print(x)
@@ -50,15 +51,17 @@ For
     #7
     #9   
    
-* Online for:
+* Inline for:
 
   ::
+
     l = [x for x in range(1,5)]
     print(l)
     >>>[1, 2, 3, 4]
 
     def increaseBy2(x):
       return x + 2
+
     l = [increaseBy2(x) for x in range(1,5)]
     print(l)
     >>>[3, 4, 5, 6]

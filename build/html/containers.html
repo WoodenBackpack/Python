@@ -1,0 +1,527 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Containters in python &mdash; Python 0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Loops" href="loops.html" />
+    <link rel="prev" title="Syntax in python" href="syntax.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Python
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="python2_vs_python3.html">Python versions 2.x vs 3.x</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virtualenv.html">Virtualenv good way to separate and organize projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pip.html">Pip your best friend to organise external modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="syntax.html">Syntax in python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Containters in python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#list">List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tuples">Tuples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dictionaries">Dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sets">Sets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="loops.html">Loops</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Containters in python</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/containers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="containters-in-python">
+<h1>Containters in python<a class="headerlink" href="#containters-in-python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="list">
+<h2>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>In python to declare a list insert a elements into square brackets:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>There is no limitation in type of elements, same python list can contain string, integers, classes etc.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;element&quot;</span><span class="p">,</span> <span class="mf">2.22</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>To get a element form list type:</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">,</span> <span class="s2">&quot;Precise Pangoli&quot;</span><span class="p">]</span>
+<span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span><span class="n">Trusty</span> <span class="n">Tahr</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Get first 3 elements:</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">,</span> <span class="s2">&quot;Precise Pangoli&quot;</span><span class="p">]</span>
+<span class="n">l</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;</span><span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Get last 2 elements:</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">,</span> <span class="s2">&quot;Precise Pangoli&quot;</span><span class="p">]</span>
+<span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+<span class="o">&gt;&gt;</span> <span class="p">[</span><span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">,</span> <span class="s2">&quot;Precise Pangoli&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Get elements starts from the thirone:</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">,</span> <span class="s2">&quot;Precise Pangoli&quot;</span><span class="p">]</span>
+<span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+<span class="o">&gt;&gt;</span><span class="p">[</span><span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">,</span> <span class="s2">&quot;Precise Pangoli&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Get Elements without last one:</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">,</span> <span class="s2">&quot;Precise Pangoli&quot;</span><span class="p">]</span>
+<span class="n">l</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span><span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Access elements in range:</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">,</span> <span class="s2">&quot;Precise Pangoli&quot;</span><span class="p">]</span>
+<span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span><span class="p">[</span><span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Add element:</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">l</span><span class="o">.</span><span class="n">apend</span><span class="p">(</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">)</span>
+<span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Remove element:</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">,</span> <span class="s2">&quot;Precise Pangoli&quot;</span><span class="p">]</span>
+<span class="n">l</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">,</span> <span class="s2">&quot;Precise Pangoli&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>OR</p>
+<p>Remove and  return element with specified index</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">,</span> <span class="s2">&quot;Precise Pangoli&quot;</span><span class="p">]</span>
+<span class="n">l</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">]</span>
+<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">,</span> <span class="s2">&quot;Precise Pangoli&quot;</span><span class="p">]</span>
+<span class="n">removed</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">remove</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Trusty</span> <span class="n">Tahr</span>
+</pre></div>
+</div>
+<p>OR</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">,</span> <span class="s2">&quot;Precise Pangoli&quot;</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="p">[</span><span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">,</span> <span class="s2">&quot;Precise Pangoli&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>del can also delete whole list</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>l = [“Bionic Beaver”, “Xenial Xerus”, “Trusty Tahr”, “Precise Pangoli”]
+del l
+print(l) // ERROR
+l no longer exist</dd>
+</dl>
+<ul class="simple">
+<li>Combining two tables:</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">]</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">]</span>
+<span class="n">l3</span> <span class="o">=</span> <span class="n">l1</span> <span class="o">+</span> <span class="n">l2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">,</span> <span class="s2">&quot;Trusty Tahr&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Multiplying tables:</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">]</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">l</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="tuples">
+<h2>Tuples<a class="headerlink" href="#tuples" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Tuples are created and accessible like lists but square brackets are replaced with round one. The main difference is that tuple elements and size cant be replaced with other ones:</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">tup</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">()</span>
+<span class="n">tup</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="c1"># tup[1] = 20 // ERROR, tuple elements cant be replaced</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Replaced is the importat word because elements can’t be replaced but can be changed:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">]</span>
+<span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;element&quot;</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tup</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;element&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">])</span>
+
+<span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Gutsy Gibbon&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tup</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;element&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Gutsy Gibbon&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">])</span>
+
+<span class="n">tup</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">2.2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tup</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;element&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Gutsy Gibbon&quot;</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Tuples cannot be changes so del keyword can only delete whole tuple</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">t</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">//</span> <span class="n">ERROR</span> <span class="n">Tuple</span> <span class="n">no</span> <span class="n">longer</span> <span class="n">exists</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="dictionaries">
+<h2>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h2>
+<p>Dictionaries are like maps in C++/Java to create empty dictionary type:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">s</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">s</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([(</span><span class="mf">4.10</span><span class="p">,</span> <span class="s2">&quot;Warty Warthog&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mf">5.04</span><span class="p">,</span> <span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">)])</span>
+<span class="o">//</span> <span class="n">create</span> <span class="n">dictionary</span> <span class="kn">from</span> <span class="nn">list</span> <span class="n">of</span> <span class="n">two</span> <span class="n">element</span> <span class="n">tuples</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ul>
+<li><p class="first">Accessing elements of dictionary:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="mf">4.10</span><span class="p">:</span><span class="s2">&quot;Warty Warthog&quot;</span><span class="p">,</span> <span class="mf">5.04</span><span class="p">:</span><span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">,</span> <span class="mf">5.10</span><span class="p">:</span><span class="s2">&quot;Breezy Badger&quot;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">[</span><span class="mf">5.04</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span><span class="s2">&quot;Hoary Hedgehog&quot;</span>
+
+<span class="c1"># If key is not in the dictionary will be added</span>
+<span class="nb">dict</span><span class="p">[</span><span class="mf">6.06</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Dapper Drake&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="p">{</span><span class="mf">4.10</span><span class="p">:</span><span class="s2">&quot;Warty Warthog&quot;</span><span class="p">,</span> <span class="mf">5.04</span><span class="p">:</span><span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">,</span> <span class="mf">6.06</span><span class="p">:</span><span class="s2">&quot;Dapper Drake&quot;</span><span class="p">,</span> <span class="mf">5.10</span><span class="p">:</span><span class="s2">&quot;Breezy Badger&quot;</span><span class="p">}</span>
+<span class="c1"># Its important to notice that elements in dictionary are in random position</span>
+
+<span class="c1"># But if you want to access element with key that is not in dictionary it will raise a error</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">[</span><span class="mf">8.04</span><span class="p">])</span>
+<span class="o">//</span> <span class="n">ERROR</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">There are two ways to get element from dictionary, but one protect developer from accessing elements that are not in dictionary</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="mf">4.10</span><span class="p">:</span><span class="s2">&quot;Warty Warthog&quot;</span><span class="p">,</span> <span class="mf">5.04</span><span class="p">:</span><span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">,</span> <span class="mf">5.10</span><span class="p">:</span><span class="s2">&quot;Breezy Badger&quot;</span><span class="p">}</span>
+<span class="c1">#print(dict[6.06])  // ERROR it will raise an KeyError exception</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mf">6.06</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span><span class="kc">None</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Iterate over keys/values/items these lists are always in the insertion order</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="mf">4.10</span><span class="p">:</span><span class="s2">&quot;Warty Warthog&quot;</span><span class="p">,</span> <span class="mf">5.04</span><span class="p">:</span><span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">,</span> <span class="mf">5.10</span><span class="p">:</span><span class="s2">&quot;Breezy Badger&quot;</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="c1">#4.10</span>
+<span class="c1">#5.04</span>
+<span class="c1">#5.10</span>
+
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">dict</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="c1"># Warty Warthog</span>
+<span class="c1"># Hoary Hedgehog</span>
+<span class="c1"># Breezy Badger</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+  <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+<span class="c1">#4.10 Warty Warthog</span>
+<span class="c1">#5.04 Hoary Hedgehog</span>
+<span class="c1">#5.10 Breezy Badger</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Remove item with specified key from dictionary</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="mf">4.10</span><span class="p">:</span><span class="s2">&quot;Warty Warthog&quot;</span><span class="p">,</span> <span class="mf">5.04</span><span class="p">:</span><span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">,</span> <span class="mf">5.10</span><span class="p">:</span><span class="s2">&quot;Breezy Badger&quot;</span><span class="p">}</span>
+<span class="k">del</span> <span class="nb">dict</span><span class="p">[</span><span class="mf">4.10</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="p">{</span><span class="mf">5.04</span><span class="p">:</span><span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">,</span> <span class="mf">5.10</span><span class="p">:</span><span class="s2">&quot;Breezy Badger&quot;</span><span class="p">}</span>
+<span class="c1"># Same as for other containers del can also remove whole dictionary</span>
+</pre></div>
+</div>
+<p>OR</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="mf">4.10</span><span class="p">:</span><span class="s2">&quot;Warty Warthog&quot;</span><span class="p">,</span> <span class="mf">5.04</span><span class="p">:</span><span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">,</span> <span class="mf">5.10</span><span class="p">:</span><span class="s2">&quot;Breezy Badger&quot;</span><span class="p">}</span>
+<span class="n">removed</span> <span class="o">=</span> <span class="nb">dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mf">5.04</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="p">{</span><span class="mf">4.10</span><span class="p">:</span><span class="s2">&quot;Bionic Beaver&quot;</span><span class="p">,</span> <span class="mf">5.10</span><span class="p">:</span><span class="s2">&quot;Breezy Badger&quot;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">removed</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="n">Hoary</span> <span class="n">Hedgehog</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>The difference between del dict[key] and dict.pop() is that pop returns a removed element item value</p>
+</div>
+<div class="section" id="sets">
+<h2>Sets<a class="headerlink" href="#sets" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Create set</p>
+<p>Set like a dictionary is unordered.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="nb">set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+
+<span class="n">l1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span> <span class="c1"># dictionary</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">}</span> <span class="c1"># set</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="kc">False</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Add element to set:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Warty Warthog&quot;</span><span class="p">,</span> <span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">}</span>
+<span class="nb">set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Breezy Badger&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">set</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="p">{</span><span class="s2">&quot;Warty Warthog&quot;</span><span class="p">,</span> <span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">,</span> <span class="s2">&quot;Breezy Badger&quot;</span><span class="p">}</span>
+<span class="n">other</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">}</span>
+<span class="nb">set</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">set</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="p">{</span><span class="s2">&quot;Warty Warthog&quot;</span><span class="p">,</span> <span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">,</span> <span class="s2">&quot;Breezy Badger&quot;</span><span class="p">,</span> <span class="s2">&quot;Xenial Xerus&quot;</span><span class="p">}</span>
+<span class="c1"># Even if other will be changed it will no affect set</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Remove element from set:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Warty Warthog&quot;</span><span class="p">,</span> <span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">}</span>
+<span class="nb">set</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Warty Warthog&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">set</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="p">{</span><span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">}</span>
+
+<span class="nb">set</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Warty Warthog&quot;</span><span class="p">,</span> <span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">}</span>
+<span class="nb">set</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Breezy Badger&quot;</span><span class="p">)</span> <span class="o">//</span> <span class="n">ERROR</span> <span class="n">removing</span> <span class="n">element</span> <span class="n">that</span> <span class="n">doesn</span><span class="s1">&#39;t exists in set will raise an Exception</span>
+</pre></div>
+</div>
+<p>To avoid raising exception You can use discard method:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Warty Warthog&quot;</span><span class="p">,</span> <span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">}</span>
+<span class="nb">set</span><span class="o">.</span><span class="n">discaer</span><span class="p">(</span><span class="s2">&quot;Breezy Badger&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">set</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="p">{</span><span class="s2">&quot;Warty Warthog&quot;</span><span class="p">,</span> <span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="loops.html" class="btn btn-neutral float-right" title="Loops" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="syntax.html" class="btn btn-neutral" title="Syntax in python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Piotr Wróblewski.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

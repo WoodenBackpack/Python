@@ -15,3 +15,4 @@ Welcome to python for C++ developers's documentation!
    pip
    syntax
    containers
+   loops
