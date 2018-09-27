@@ -1,0 +1,157 @@
+Files handling in python
+************************
+
+==============
+Read from file
+==============
+
+To open a file in python type:
+
+::
+  
+  f = open(FILENAME)
+
+It opens a file specified with FILENAME but only for reading because default mode for files is "r" - read
+To open file for writing and any other modes type:
+
+::
+
+  f = open(FILENAME, MODE)
+
+When MODE can be equal:
+  * "r" - read
+  * "w" - write
+  * "a" - append
+  * "r+" - writing and reading
+
+Always remember to close a file:
+
+::
+
+  f.open(FILENAME)
+  f.close()
+
+To read raw string - string with new lines type:
+
+::
+
+  # Content of file test.txt used in every example:
+  #
+  # Hello
+  # World
+  # 
+  # "Some example text in quote marks"
+
+::
+
+  # test.txt content:
+
+  f = open("test.txt")
+  raw = f.read()
+  print(raw)
+
+  >>>Hello
+  World
+  
+  "Some example text in quote marks"
+
+Read can also take an argument - number of characters to read
+
+:: 
+
+  # test.txt
+  f = open("test.txt")
+  chars = f.read(4)
+  print(chars)
+  f.close()
+  >>>Hell
+
+Method to get list of all lines:
+
+::
+
+  # test.txt
+  f = open("test.txt")
+  lines = f.readlines()
+  print(lines)
+  f.close()
+  >>>['Hello\n', 'World\n', '\n', '"Some example text in quote marks\n"']
+
+  #There is also simpler way to do it:
+  f = open("test.txt")
+  l = list(f)
+  print(l)
+  f.close()
+  >>>['Hello\n', 'World\n', '\n', '"Some example text in quote marks\n"']
+
+Or to get simple line:
+
+::
+
+  # test.txt
+  f = open("test.txt")
+  print(f.getline())
+  print(f.getline())
+  f.close()
+  >>>Hello
+
+  World
+
+You can use it in a simple loop:
+
+::
+
+  # test.txt
+  f = open("test.txt")
+  line = f.readline()
+  while line:
+    print(line)
+    line = f.readline()
+  f.close()
+
+=============
+Write to file
+=============
+
+To write a content to file pass a string as a argument to write function ofc file must be opened in writing mode
+
+::
+
+  content = "Another simple\nExample\nContent"
+  f = open("newFile.txt", "w")
+  f.write(content)
+  f.close()
+  # It will write content to file with new lines:
+  # newFile.txt:
+  # Another simple
+  # Example
+  # Content
+
+To write multiple lines from list use:
+
+::
+ 
+  content = ["First Line", "Second Line"]
+  f = open("newFile.txt", "w")
+  f.writelines(content)
+  f.close()
+
+  f = open("newFile.txt", "r")
+  print(f.read())
+  # newFile.txt
+  # FirstLineSecondLine
+
+Important thing is that writelines() does not add line separators
+
+There is also functionality to open a file but without care about closing it cause with statement will do it for us:
+
+::
+
+  with open(FILENAME, "r+") as inputFile:
+    # file is opend here and will close when block ends
+    # now to control file use inputFile
+    l = inputFile.readlines()
+    ...
+  ...
+  # inputFile is closed here but inputFile variable is still reachable
+

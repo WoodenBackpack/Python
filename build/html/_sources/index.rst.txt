@@ -16,3 +16,4 @@ Welcome to python for C++ developers's documentation!
    syntax
    containers
    loops
+   files
