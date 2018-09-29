@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 import glob
 
 def getListOfNonEmptyLines(fileName):
@@ -41,7 +42,7 @@ class Poem():
     self.title = title
     self.content = content
   def rawContentList(self):
-    output = [x for x in self.content]
+    output = self.content[:]
     # create a list of lines from content
     return output.append(str("Author: " + self.author + self.title))
     # Adds a author and title to last line
@@ -53,9 +54,17 @@ class Poem():
     # ie Krzysztof Kamil Baczynski Biała Magia
     return self.author + " " + self.title
 
+poems = open("allPoems.ltr", "w")
+space = "\n\n**********************\n\n********************\n\n"
+
 for poem in createPoemsFromDirectory():
+  rawContent = "\n".join(poem.rawContentList())
+  poems.write(rawContent)
   with open(poem.title.replace(" ","") + "_" + poem.author.replace(" ", "") + ".txt", "w") as outputFile:
     # Opens file with name ie: "KrzysztofKamilBaczyński_Białamagia.txt"
-    outputFile.write(poem.rawContentList())
+    outputFile.write(rawContent)
     # Writes rawContent to file
+  poems.write(space)
+
+poems.close()
 
