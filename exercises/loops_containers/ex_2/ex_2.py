@@ -41,7 +41,7 @@ class Poem():
     self.title = title
     self.content = content
   def rawContentList(self):
-    output = [x for x in self.content]
+    output = self.content[:]
     # create a list of lines from content
     return output.append(str("Author: " + self.author + self.title))
     # Adds a author and title to last line
