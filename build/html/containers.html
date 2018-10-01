@@ -92,6 +92,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="loops.html">Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="files.html">Files handling in python</a></li>
 </ul>
 
             
@@ -449,13 +450,21 @@ l no longer exist</dd>
 </div>
 <p>To avoid raising exception You can use discard method:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Warty Warthog&quot;</span><span class="p">,</span> <span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">}</span>
-<span class="nb">set</span><span class="o">.</span><span class="n">discaer</span><span class="p">(</span><span class="s2">&quot;Breezy Badger&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="s2">&quot;Breezy Badger&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">set</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span><span class="p">{</span><span class="s2">&quot;Warty Warthog&quot;</span><span class="p">,</span> <span class="s2">&quot;Hoary Hedgehog&quot;</span><span class="p">}</span>
 </pre></div>
 </div>
 </li>
+<li><p class="first">Length of container:</p>
+</li>
 </ul>
+<p>To get a length of container:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span><span class="mi">3</span>
+</pre></div>
+</div>
 </div>
 </div>
 

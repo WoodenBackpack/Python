@@ -316,8 +316,16 @@ Sets
   ::    
 
     set = {"Warty Warthog", "Hoary Hedgehog"}
-    set.discaer("Breezy Badger")
+    set.discard("Breezy Badger")
     print(set)
     >>>{"Warty Warthog", "Hoary Hedgehog"}
 
+* Length of container:
 
+To get a length of container:
+
+::
+
+  a = {1:"a", 2:"b", 3:[1,2,3]}
+  print(len(a))
+  >>>3

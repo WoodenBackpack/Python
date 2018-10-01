@@ -17,3 +17,4 @@ Welcome to python for C++ developers's documentation!
    containers
    loops
    files
+   strings

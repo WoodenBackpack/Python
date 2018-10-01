@@ -277,7 +277,7 @@ To open file for writing and any other modes type:</p>
 </pre></div>
 </div>
 <p>Important thing is that writelines() does not add line separators</p>
-<p>There is also functionality to open a file but without care about closing it cause with statement will do it for us:</p>
+<p>There is also functionality to open a file but without care about closing it cause “with … as …” statement will do it for us:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">FILENAME</span><span class="p">,</span> <span class="s2">&quot;r+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">inputFile</span><span class="p">:</span>
   <span class="c1"># file is opend here and will close when block ends</span>
   <span class="c1"># now to control file use inputFile</span>

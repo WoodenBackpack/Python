@@ -143,7 +143,7 @@ To write multiple lines from list use:
 
 Important thing is that writelines() does not add line separators
 
-There is also functionality to open a file but without care about closing it cause with statement will do it for us:
+There is also functionality to open a file but without care about closing it cause "with ... as ..." statement will do it for us:
 
 ::
 
