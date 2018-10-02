@@ -18,3 +18,4 @@ Welcome to python for C++ developers's documentation!
    loops
    files
    strings
+   oop
