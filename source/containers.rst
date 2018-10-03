@@ -66,6 +66,22 @@ List
     l[1:3]
     >>>["Xenial Xerus", "Trusty Tahr"]
 
+  * Access elements with step:
+  
+  ::
+
+    l = ["Bionic Beaver", "Xenial Xerus", "Trusty Tahr", "Precise Pangoli"]
+    print(l[::2])
+    >>>["Bionic Beaver", "Trusty Tahr"]
+
+  * Use step to print elements in reversed order:
+
+  ::
+  
+    l = ["Bionic Beaver", "Xenial Xerus", "Trusty Tahr", "Precise Pangoli"]
+    print(l[::-1])
+    >>>["Precise Pangoli", "Trusty Tahr", "Xenial Xerus" , "Bionic Beaver"]
+
   * Add element:
   
   ::

@@ -8,13 +8,17 @@ Class definition:
   class MyNewClass:
     pass
 
+.. note::
+
+  pass keyword is doing nothing it allows to leave a inplementation without body without it above code will not compile
+
 To create a object of MyNewClass type:
 
 ::
 
   var = MyNewClass
 
-Lets add constructor to our new class
+Lets add initializer to our new class
 
 ::
 
@@ -38,7 +42,7 @@ If you are programming in C++ or Java "self" can be confusing for you. "self" re
   print(var.x)
   >>>20
 
-Lets take a case when we'll declare class member outside the __init__ constructor:
+Lets take a case when we'll declare class member outside the __init__ initializer:
 
 ::
 
@@ -85,3 +89,72 @@ In python every variable is the reference to a object so by a mistake you can ov
   msg = 12
   var = msg() # Oops You got no longer access to msg class! ERROR
 
+Inheritance
+
+::
+
+  class Base:
+    def __init__(self):
+      self.baseMember = "base member"
+      print("Base class initializer")
+
+  class Derived(Base):
+    def __init__(self):
+      self.derivedMember = "derived member"
+      print("Derived class initializer")
+
+Its another python difference from C++/Java-like languages cause lets take a look:
+
+::
+
+  c = Derived()
+  >>>Derived class initializer
+  # Look Base class initializer wasnt called
+  print(c.baseMember) # ERROR
+  
+
+So... you have to call base class initializer in Derived class init:
+
+::
+
+  class Derived(Base):
+    def __init__(self):
+      Base.__init__(self)
+      self.derivedMember
+      print("Dervied class initializer")
+
+  c = Derived()
+  >>>Base class initializer
+  Derived class initializer
+  
+  print(c.baseMember)
+  >>>base member  # Now its ok!
+
+So how looks multiple inheritance when we want to call initializer of every parent class:
+
+::
+
+  class A:
+    def __init__(self):
+      print("A")
+  class B:
+    def __init__(self):
+      print("B")
+  class C:
+    def __init__(self):
+      print("C")
+
+  class D(A, B, C):
+    def __init__(self):
+      A.__init__(self)
+      B.__init__(self)
+      C.__init__(self)
+      print("D")
+
+  d = D()
+  >>>A
+  B
+  C
+  D
+
+ 

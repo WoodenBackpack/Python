@@ -27,7 +27,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="OOP" href="oop.html" />
+    <link rel="prev" title="Files handling in python" href="files.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -77,7 +79,7 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="python2_vs_python3.html">Python versions 2.x vs 3.x</a></li>
 <li class="toctree-l1"><a class="reference internal" href="virtualenv.html">Virtualenv good way to separate and organize projects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pip.html">Pip your best friend to organise external modules</a></li>
@@ -85,6 +87,11 @@
 <li class="toctree-l1"><a class="reference internal" href="containers.html">Containters in python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loops.html">Loops</a></li>
 <li class="toctree-l1"><a class="reference internal" href="files.html">Files handling in python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Strings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#string-formating">String formating</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="oop.html">OOP</a></li>
 </ul>
 
             
@@ -189,23 +196,59 @@
 <span class="o">&gt;&gt;&gt;</span><span class="n">ETEXTample</span> <span class="n">teTEXTt</span>
 </pre></div>
 </div>
-<p>You can also replace only first x occurences:</p>
+<ul class="simple">
+<li>You can also replace only first x occurences:</li>
+</ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Example text&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;XXX&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span><span class="n">EXXXample</span> <span class="n">text</span>
 </pre></div>
 </div>
-<p>Split string by a characters and return list of elements divided by provided characters</p>
+<ul class="simple">
+<li>Split string by a characters and return list of elements divided by provided characters</li>
+</ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Jan,Dlugosz,,,,12,15&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">))</span>
 <span class="o">&gt;&gt;&gt;</span><span class="p">[</span><span class="s2">&quot;Jan&quot;</span><span class="p">,</span><span class="s2">&quot;Dlugosz&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;12&quot;</span><span class="p">,</span><span class="s2">&quot;16&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Reverse operation to split() - join</p>
+<ul class="simple">
+<li>Reverse operation to split() - join</li>
+</ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Jan&quot;</span><span class="p">,</span> <span class="s2">&quot;Dlugosz&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span> <span class="s2">&quot;16&quot;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
 <span class="o">&gt;&gt;&gt;</span><span class="s1">&#39;Jan, Dlugosz, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;12&quot;, &quot;16&quot;&#39;</span>
 </pre></div>
+</div>
+<div class="section" id="string-formating">
+<h2>String formating<a class="headerlink" href="#string-formating" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>3 different ways to print formatted string</li>
+</ul>
+<p>F-strings</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&quot;Number: </span><span class="si">{number}</span><span class="s2">, list: </span><span class="si">{list}</span><span class="s2">&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="n">Number</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nb">list</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>% format</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Number: </span><span class="si">%d</span><span class="s2">, list: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="s2">&quot;[&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;]&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="n">Number</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nb">list</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>% .format()</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Number: </span><span class="si">{0}</span><span class="s2">, list: </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="n">Number</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nb">list</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -214,6 +257,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="oop.html" class="btn btn-neutral float-right" title="OOP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="files.html" class="btn btn-neutral" title="Files handling in python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

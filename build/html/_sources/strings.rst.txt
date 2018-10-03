@@ -42,7 +42,7 @@ You can remove whitespaces from the left side of string, right side or buth usin
   print(a.replace("x", "TEXT")
   >>>ETEXTample teTEXTt
 
-You can also replace only first x occurences:
+* You can also replace only first x occurences:
 
 ::
 
@@ -50,7 +50,7 @@ You can also replace only first x occurences:
   print(a.replace("x", "XXX", 1)
   >>>EXXXample text
  
-Split string by a characters and return list of elements divided by provided characters
+* Split string by a characters and return list of elements divided by provided characters
 
 ::
 
@@ -58,7 +58,7 @@ Split string by a characters and return list of elements divided by provided cha
   print(a.split(","))
   >>>["Jan","Dlugosz","","","","12","16"]
 
-Reverse operation to split() - join
+* Reverse operation to split() - join
 
 ::
 
@@ -66,4 +66,38 @@ Reverse operation to split() - join
   print(",".join(a))
   >>>'Jan, Dlugosz, "", "", "", "12", "16"'
 
+================
+String formating
+================
+  
+* 3 different ways to print formatted string
 
+F-strings
+
+::
+  
+  number = 20
+  list = ["a", "b", 20]
+  s = f"Number: {number}, list: {list}"
+  print(s)
+  >>>Number: 20, list: ["a", "b", 20]
+
+% format
+
+::
+  
+  number = 20
+  list = ["a", "b", 20]
+  s = "Number: %d, list: %s" % (number, "[" + (", ").join(str(x) for x in list) + "]")
+  print(s)
+  >>>Number: 20, list: ["a", "b", 20]
+
+% .format()
+
+::
+
+  number = 20
+  list = ["a", "b", 20]
+  s = "Number: {0}, list: {1}".format(number, list)
+  print(s)
+  >>>Number: 20, list: ["a", "b", 20]

@@ -159,11 +159,15 @@
   <span class="k">pass</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">pass keyword is doing nothing it allows to leave a inplementation without body without it above code will not compile</p>
+</div>
 <p>To create a object of MyNewClass type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="n">MyNewClass</span>
 </pre></div>
 </div>
-<p>Lets add constructor to our new class</p>
+<p>Lets add initializer to our new class</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyNewClass</span><span class="p">:</span>
   <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Created MyNewClass instance&quot;</span><span class="p">)</span>
@@ -183,7 +187,7 @@
 <span class="o">&gt;&gt;&gt;</span><span class="mi">20</span>
 </pre></div>
 </div>
-<p>Lets take a case when we’ll declare class member outside the __init__ constructor:</p>
+<p>Lets take a case when we’ll declare class member outside the __init__ initializer:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyNewClass</span><span class="p">:</span>
   <span class="n">l</span> <span class="o">=</span> <span class="p">[]</span>
   <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -221,6 +225,65 @@ In python every variable is the reference to a object so by a mistake you can ov
 
 <span class="n">msg</span> <span class="o">=</span> <span class="mi">12</span>
 <span class="n">var</span> <span class="o">=</span> <span class="n">msg</span><span class="p">()</span> <span class="c1"># Oops You got no longer access to msg class! ERROR</span>
+</pre></div>
+</div>
+<p>Inheritance</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Base</span><span class="p">:</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">baseMember</span> <span class="o">=</span> <span class="s2">&quot;base member&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Base class initializer&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Derived</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">derivedMember</span> <span class="o">=</span> <span class="s2">&quot;derived member&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Derived class initializer&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Its another python difference from C++/Java-like languages cause lets take a look:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">Derived</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span><span class="n">Derived</span> <span class="k">class</span> <span class="nc">initializer</span>
+<span class="c1"># Look Base class initializer wasnt called</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">baseMember</span><span class="p">)</span> <span class="c1"># ERROR</span>
+</pre></div>
+</div>
+<p>So… you have to call base class initializer in Derived class init:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Derived</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">Base</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">derivedMember</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dervied class initializer&quot;</span><span class="p">)</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">Derived</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span><span class="n">Base</span> <span class="k">class</span> <span class="nc">initializer</span>
+<span class="n">Derived</span> <span class="k">class</span> <span class="nc">initializer</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">baseMember</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="n">base</span> <span class="n">member</span>  <span class="c1"># Now its ok!</span>
+</pre></div>
+</div>
+<p>So how looks multiple inheritance when we want to call initializer of every parent class:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">B</span><span class="p">:</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">C</span><span class="p">:</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">D</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">A</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    <span class="n">B</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    <span class="n">C</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">)</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="n">D</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span><span class="n">A</span>
+<span class="n">B</span>
+<span class="n">C</span>
+<span class="n">D</span>
 </pre></div>
 </div>
 </div>
