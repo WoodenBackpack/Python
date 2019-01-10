@@ -1,11 +1,7 @@
 Syntax in python
 ****************
 
-
-
-Syntax in python can be a bit strange for Java or C++ developers because:\n
-
-* There is no semicolons ; at the end of line
+* There are no semicolons ; at the end of line
 
 .. code-block:: python
   
@@ -17,21 +13,22 @@ Syntax in python can be a bit strange for Java or C++ developers because:\n
 
   list = [1,4,3,2,1,6]
   
-  for x in list:
-    if x > 3:
-      print(x)
+  for x in list: # first level - no spaces
+    if x > 3:    # second level - two spaces
+      print(x)   # third - four spaces
+  print("end")   # back to the first level
 
 * Compiler will raise an error if you made any mistake in indentation:
 
-:: 
+.. code-block:: python
 
   list = [1,4,3,2,1,6]
-  for x in list:
-    if x % 2 == 0:
-        print(x)  # too much spaces here (4)
+  for x in list:    # fist level 0 spaces
+    if x % 2 == 0:  # second level 2 spaces
+        print(x)    # too much spaces here (6), should be 4
   >>>IndentationError: unindent does not match any outer indentation level 
 
-* There is no need to name a type of variable in python, you can change a type of value in your code 
+* There is no need to name a type of variable in python.
 
 .. code-block:: python
 

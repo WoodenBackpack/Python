@@ -11,6 +11,7 @@ Welcome to python for C++ developers's documentation!
    :caption: Contents:
    
    python2_vs_python3
+   python_why
    virtualenv
    pip
    syntax
@@ -18,4 +19,3 @@ Welcome to python for C++ developers's documentation!
    loops
    files
    strings
-   oop
